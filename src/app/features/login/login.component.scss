@@ -1,0 +1,27 @@
+.Countainer {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/assets/img/backgroundLogin.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.Aligne-Center {
+  display: flex;
+  justify-content: center;
+}
+.Logo {
+  width: 80px;
+}
+.Card-Group {
+  padding: 30px;
+}
+mat-form-field {
+  width: 100%;
+}
+mat-card-content {
+  width: 250PX;
+  height: 200PX;
+}
