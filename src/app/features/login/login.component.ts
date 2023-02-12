@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,16 +8,27 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  error: boolean = false;
-
+  error: any;
   form: FormGroup = new FormGroup({
     username: new FormControl(''),
     password: new FormControl(''),
   });
-  constructor() {}
+  constructor(private router: Router) {
+    this.error = '';
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
   submit() {
-    console.log('test');
+    if (
+      this.form.get('username')?.value === 'teste@teste.com' &&
+      this.form.get('password')?.value === '123456'
+    ) {
+      localStorage.setItem('setUser', JSON.stringify({ loged: true }));
+      this.router.navigate(['/home']);
+    } else {
+      this.error = 'Email ou Senha incorreto';
+    }
   }
 }

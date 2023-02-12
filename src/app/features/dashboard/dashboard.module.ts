@@ -1,3 +1,4 @@
+import { SharedModule } from './../../../shared/shared.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,7 +13,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    SharedModule
   ]
 })
 export class DashboardModule { }

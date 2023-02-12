@@ -13,6 +13,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { SideBarComponent } from './component/side-bar/side-bar.component';
+import { ChartLineComponent } from './component/chart-line/chart-line.component';
 
 @NgModule({
   imports: [
@@ -31,7 +36,10 @@ import { MatCardModule } from '@angular/material/card';
     MatTabsModule,
     MatCardModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule
   ],
   exports: [
     CommonModule,
@@ -48,7 +56,16 @@ import { MatCardModule } from '@angular/material/card';
     MatTabsModule,
     MatCardModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule,
+    SideBarComponent,
+    ChartLineComponent
+  ],
+  declarations: [
+    SideBarComponent,
+    ChartLineComponent
   ],
 })
 export class SharedModule {}

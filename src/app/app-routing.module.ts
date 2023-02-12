@@ -8,6 +8,13 @@ const routes: Routes = [
     redirectTo: 'login',
   },
   {
+    path: 'home',
+    loadChildren: () =>
+      import('./features/home-page/home-page.module').then(
+        (m) => m.HomePageModule
+      ),
+  },
+  {
     path: 'dashboard',
     loadChildren: () =>
       import('./features/dashboard/dashboard.module').then(
