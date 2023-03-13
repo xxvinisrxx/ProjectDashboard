@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  value: any = '';
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+  }
+   buttonClick() {
+    const data = {test: 'e'};
+    if(data.test === 'e')  {
+
+      console.log('é e')
+    }else {
+      console.log('não é e')
+    }
+
+   }
 }
